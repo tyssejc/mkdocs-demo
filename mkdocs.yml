@@ -1,0 +1,25 @@
+site_name: Data Layer Spec
+repo_url: https://github.com/tyssejc/mkdocs-demo
+repo_name: tyssejc/mkdocs-demo
+edit_uri: edit/main/docs/
+theme:
+  name: material
+  palette:
+    primary: indigo
+  features:
+    - content.code.annotate
+    - navigation.indexes
+    - navigation.sections
+    - navigation.tabs
+    - navigation.expand
+    - navigation.top
+markdown_extensions:
+  - admonition
+  - meta
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+plugins:
+  - git-revision-date
