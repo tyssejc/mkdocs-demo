@@ -4,6 +4,7 @@ repo_name: tyssejc/mkdocs-demo
 edit_uri: edit/main/docs/
 theme:
   name: material
+  custom_dir: overrides
   palette:
     primary: indigo
   features:
