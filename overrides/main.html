@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block libs %}
+<!-- Netlify Identity widget -->
+<script type="text/javascript" src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+{% endblock %}
+
+{% block site_nav %}
+{{ super() }}
+<div data-netlify-identity-menu></div>
+{% endblock %}
