@@ -3,6 +3,20 @@
 {% block libs %}
 <!-- Netlify Identity widget -->
 <script type="text/javascript" src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+<script type="text/javascript">
+    
+    // Bind to events
+    netlifyIdentity.on('init', user => {
+      if (!user) netlifyIdentity.open();
+      console.log('init', user);
+    });
+    netlifyIdentity.on('login', user => console.log('login', user));
+    netlifyIdentity.on('logout', () => console.log('Logged out'));
+    netlifyIdentity.on('error', err => console.error('Error', err));
+    netlifyIdentity.on('open', () => console.log('Widget opened'));
+    netlifyIdentity.on('close', () => console.log('Widget closed'));
+
+</script>
 {% endblock %}
 
 {% block site_nav %}
