@@ -22,5 +22,5 @@ markdown_extensions:
   - pymdownx.snippets
   - pymdownx.superfences
 plugins:
-  - git-revision-date
+  - git-revision-date-localized
 dev_addr: '0.0.0.0:8080'
