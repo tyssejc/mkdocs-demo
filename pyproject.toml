@@ -1,4 +1,5 @@
 [tool.poetry]
+  package-mode = false
   name = "mkdocs-demo"
   version = "0.1.0"
   description = ""
@@ -7,6 +8,7 @@
 
 [tool.poetry.dependencies]
   python = "^3.8"
+  pyyaml = "^6.0.1"
   mkdocs = "^1.4.2"
   mkdocs-material = "^9.0.5"
   mkdocs-git-revision-date-localized-plugin = "^1.2.0"
