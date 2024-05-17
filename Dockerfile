@@ -1,19 +1,14 @@
-FROM python:3.10.0-alpine3.13
+FROM python:3.10.0-alpine3.13]
 
-ARG WITH_PLUGINS=true
+COPY pyproject.toml pyproject.toml
+COPY poetry.lock poetry.lock
 
-COPY requirements.txt requirements.txt
-COPY requirements-plugins.txt requirements-plugins.txt
-
-RUN pip install --no-cache-dir -r requirements.txt \
-  && \
-    if [ "${WITH_PLUGINS}" = "true"]; then \
-      pip install --no-cache-dir -r requirements-plugins.txt; \
-    fi
+RUN pip install --no-cache-dir -r poetry \
+  && poetry install
 
 WORKDIR /docs
 
 EXPOSE 8080
 
-ENTRYPOINT ["mkdocs"]
-CMD ["serve"]
+ENTRYPOINT ["poetry"]
+CMD ["run mkdocs serve"]
